@@ -38,6 +38,7 @@ digraph add{
 }
 </code></pre>
 
+and picture like below can be genertated by using *.dot drawer.( "dot" command under *.unix with graphviz)
 ![](example.png "example")
 
 
