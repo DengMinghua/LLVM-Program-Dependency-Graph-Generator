@@ -2,18 +2,15 @@
 #include "llvm/IR/Function.h"
 #include "llvm/Pass.h"
 #include "llvm/Support/raw_ostream.h"
-#include <vector>
 using namespace llvm;
 
 #define DEBUG_TYPE "hello"
-STATISTIC(HelloCounter, "Counts number of functions greeted");
 
 namespace {
 	struct Hello :public FunctionPass {
 		static char ID;
 		Hello():FunctionPass(ID){}
 		virtual bool runOnFunction(Function &F) override {
-			++HelloCounter;
 			errs()<< "digraph "+F.getName() + "{\n";
 			errs() << "\n";
 			for(auto block = F.getBasicBlockList().begin();block != F.getBasicBlockList().end();block++)
@@ -41,4 +38,4 @@ namespace {
 }
 
 char Hello::ID = 0;
-static RegisterPass<Hello> X("hello", "Hello World Pass");
+static RegisterPass<Hello> X("pdg", "PDG Pass");
