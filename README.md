@@ -1,4 +1,7 @@
 # LLVM-Program-Dependency-Graph-Generator
+
+** Please make sure you have LLVM installed ** 
+
 A pass that can generate PDG(in *.dot) for LLVM.
 
   As LLVM dosen't provide ways to generate Program Dependency Graph(PDG), and I need to use them in one of my project.
