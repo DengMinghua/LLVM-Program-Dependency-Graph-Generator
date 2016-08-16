@@ -38,4 +38,6 @@ digraph add{
 }
 </code></pre>
 
+![](example.png "example")
+
 
